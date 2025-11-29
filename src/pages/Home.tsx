@@ -1,220 +1,272 @@
+// src/pages/Home.tsx (ou .jsx)
 
-/*import { useNavigate } from "react-router-dom";*/
-import bgImage from "../assets/chambre2.jpg"; // image principale
+import { useNavigate } from "react-router-dom";
+import { motion } from "framer-motion"; // On garde motion car il est utilisé dans les autres sections
+import ImageCarousel from "../components/ImageCarousel"; 
+import HeroCarousel from "../components/HeroCarousel"; // <-- NOUVEL IMPORT
+
+// --- Importations d'images (Gardons seulement celles utilisées DANS ce fichier) ---
+
 import espace1 from "../assets/espace1.jpg";
 import chambre2 from "../assets/chambre2.jpg";
-import { useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
 import vue from "../assets/jardin1.jpg";
+
 import chambre from "../assets/jardin2.jpg";
 import espace from "../assets/jardin3.jpg";
 import jardin from "../assets/jardin4.jpg";
-import jardine from "../assets/jardin3.jpg";
-import jardie from "../assets/jardin6.jpg";
-import ImageCarousel from "../components/ImageCarousel";
 
 
+// --- Définition des animations Framer Motion (pour les sections ci-dessous) ---
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.15, 
+      delayChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+};
+
+// --- Composant principal ---
 export default function Home() {
   const navigate = useNavigate();
 
+  // Liste des images pour le carrousel de la Galerie (Section 4)
+  const carouselImages = [chambre, chambre2, espace1, vue, jardin, espace];
+
   return (
-    <div>
-      {/* --- SECTION 1 : Bannière principale --- */}
-      <section
-        className="relative h-[100vh] flex flex-col items-center justify-center text-white -mt-16"
-        style={{
-          backgroundImage: `url(${bgImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-        }}
-      >
-        {/* Superposition marine */}
-        <div className="absolute inset-0 bg-marine/40"></div>
-
-        {/* Contenu principal */}
-        <div className="relative z-10 px-4 text-center">
-          {/* Animation du titre */}
-          <motion.h1
-            initial={{ opacity: 0, y: 40 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="text-3xl md:text-4xl font-bold mb-3"
-          >
-            Rester avec le confort <br />
-            <span className="text-lightorange">Perfection de l'événement</span>
-          </motion.h1>
-
-          {/* Animation du paragraphe */}
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-            className="text-sm md:text-base max-w-2xl mx-auto mb-6"
-          >
-            Vivez des séjours chaleureux et des événements sans faille avec nous !
-          </motion.p>
-
-          {/* Animation du bouton */}
-          <motion.button
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.9 }}
-            onClick={() => navigate("/contact")}
-            className="bg-lightorange text-white font-semibold px-6 py-3 rounded-full shadow-lg hover:bg-orange-500 transition"
-          >
-            Contactez-nous
-          </motion.button>
-        </div>
-      </section>
-
-      {/* --- SECTION 2 : Nos Offres --- */}
-      <section className="py-16 bg-gray-50 text-gray-800 text-center md:px-20">
-        <h2 className="text-3xl font-bold text-marine mb-10 mr-48">Nos Offres</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10  md:px-20">
-          {/* Carte 1 - Location d’appartement */}
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition flex flex-col w-96">
-            <div className="p- flex-1">
-              <img
-                src={chambre2}
-                alt="Appartement"
-                className="w-full h-96 object-cover"
-              />
-              <h3 className="text-2xl font-semibold text-marine mb-3">
-                Suite VIP
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Profitez de maisons confortables et élégantes, idéales pour vos aventures en Afrique. Votre escapade de rêve vous attend !
-              </p>
-
-            </div>
-            <button onClick={() => navigate("/Residences")} className="mt-4 bg-marine text-white py-2 px-4 rounded hover:bg-opacity-80 transition">
-              Explorez
-            </button>
-          </div>
-
-          {/* Carte 2 - Espace événementiel */}
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition flex flex-col w-96 ">
-            <img
-              src={espace1}
-              alt="Espace événementiel"
-              className="w-full h-96 object-cover"
-            />
-            <div className="p-6 flex-1">
-              <h3 className="text-2xl font-semibold text-marine mb-3">
-                Espace Événementiel
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Organisez des événements inoubliables dans nos espaces joliment décorés, conçus pour rendre vos moments spéciaux !
-              </p>
-            </div>
-            <button className="mt-4 bg-marine text-white py-2 px-4 rounded hover:bg-opacity-80 transition">
-              Explorez
-            </button>
-          </div>
-
-          {/* Carte 3 - Service de décoration */}
-          <div className="bg-white shadow-lg rounded-2xl overflow-hidden hover:shadow-2xl transition flex flex-col w-96">
-            <img
-              src={vue}
-              alt="Espace événementiel"
-              className="w-full h-96 object-cover"
-            />
-            <div className="p-6 flex-1">
-              <h3 className="text-2xl font-semibold text-marine mb-3">
-                Suite Prenium
-              </h3>
-              <p className="text-gray-600 mb-4">
-                Organisez des événements inoubliables dans nos espaces joliment décorés, conçus pour rendre vos moments spéciaux !
-              </p>
-            </div>
-            <button onClick={() => navigate("/Residences")} className="mt-4 bg-marine text-white py-2 px-4 rounded hover:bg-opacity-80 transition">
-              Explorez
-            </button>
-          </div>
-
-        </div>
-      </section>
-
-      {/* --- SECTION 3 : Pourquoi nous choisir ? --- */}
-      <section className="py-20 bg-white text-center">
-        <h2 className="text-3xl font-bold text-marine mb-8">
-          Pourquoi nous choisir ?
+    <div className="overflow-hidden">
+      
+      {/*-- SECTION 1 : Bannière principale (CARROUSEL) ---
+        (Utilise le composant HeroCarousel importé)
+      */}
+      <HeroCarousel /> 
+      
+      {/*---SECTION 2 : Nos Offres (Services) ---*/}
+      <section className="py-20 lg:py-28 bg-gray-50 text-gray-800">
+        <h2 className="text-4xl font-bold text-marine text-center mb-16 px-4">
+          Services de Prestige
         </h2>
 
-        {/* Texte d’introduction centré et responsive */}
-        <p className="max-w-3xl mx-auto text-gray-700 text-base md:text-lg leading-relaxed mb-12 px-4">
-          Chez <span className="font-semibold text-marine">Africaine des Infrastructures et des Investisseurs</span>,
-          nous croyons en la création d'expériences inoubliables. Notre passion pour
-          l'hospitalité nous pousse à offrir un service exceptionnel, un hébergement
-          de qualité et des espaces événementiels remarquables. Nous accordons une
-          grande importance à chaque client et mettons tout en œuvre pour rendre votre
-          séjour ou votre célébration inoubliable, en garantissant joie et confort à tous !
+        {/* Grille de cartes responsive et centrée */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 max-w-7xl mx-auto px-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+        >
+          
+          {/* Carte 1 - Résidences de Luxe (Suites VIP) */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group flex flex-col"
+          >
+            <div className="h-64 overflow-hidden">
+                <img
+                    src={chambre2}
+                    alt="Suite VIP"
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+            </div>
+            <div className="p-8 flex-1 flex flex-col">
+              <h3 className="text-3xl font-bold text-marine mb-3 group-hover:text-lightorange transition">
+                Résidences de Luxe
+              </h3>
+              <p className="text-gray-600 mb-6 flex-1">
+                Des Suites VIP et Premium pensées comme votre **adresse privée**. Profitez d'un confort absolu et d'un service cinq étoiles après vos explorations.
+              </p>
+              <button 
+                onClick={() => navigate("/Residences")} 
+                className="self-start text-lightorange font-semibold flex items-center group-hover:text-marine transition"
+              >
+                Découvrir les Suites →
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Carte 2 - Espace événementiel */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group flex flex-col"
+          >
+               <div className="h-64 overflow-hidden">
+                <img
+                    src={espace1}
+                    alt="Espace événementiel"
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+            </div>
+            <div className="p-8 flex-1 flex flex-col">
+              <h3 className="text-3xl font-bold text-marine mb-3 group-hover:text-lightorange transition">
+                Événements sur Mesure
+              </h3>
+              <p className="text-gray-600 mb-6 flex-1">
+                Orchestrez vos réunions, réceptions ou mariages dans nos lieux d'exception. Une exécution sans faille garantie par notre équipe.
+              </p>
+              <button 
+                onClick={() => navigate("/Evenements")} // Assurez-vous d'avoir cette route
+                className="self-start text-lightorange font-semibold flex items-center group-hover:text-marine transition"
+              >
+                Organiser votre Événement →
+              </button>
+            </div>
+          </motion.div>
+
+          {/* Carte 3 - Conciergerie Premium (Remplacer "Service de décoration") */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 transform hover:-translate-y-1 group flex flex-col"
+          >
+               <div className="h-64 overflow-hidden">
+                <img
+                    src={vue} // Image pour un service ou une vue
+                    alt="Conciergerie Premium"
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-500"
+                />
+            </div>
+            <div className="p-8 flex-1 flex flex-col">
+              <h3 className="text-3xl font-bold text-marine mb-3 group-hover:text-lightorange transition">
+                Conciergerie 24/7
+              </h3>
+              <p className="text-gray-600 mb-6 flex-1">
+                Notre équipe multilingue est à votre disposition pour toute demande : transferts, excursions privées ou réservations exclusives.
+              </p>
+              <button 
+                onClick={() => navigate("/Services")} // Assurez-vous d'avoir cette route
+                className="self-start text-lightorange font-semibold flex items-center group-hover:text-marine transition"
+              >
+                Découvrir le Service →
+              </button>
+            </div>
+          </motion.div>
+
+        </motion.div>
+      </section>
+
+      {/* =========================================================
+        --- SECTION 3 : Pourquoi nous choisir ? (Valeurs) ---
+        =========================================================
+      */}
+      <section className="py-20 lg:py-28 bg-white text-center px-4">
+        <h2 className="text-4xl font-bold text-marine mb-8">
+          Votre Confiance, Notre Engagement
+        </h2>
+
+        {/* Texte d’introduction plus professionnel */}
+        <p className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed mb-16">
+          En tant qu'**Africaine des Infrastructures et des Investisseurs**, nous sommes le partenaire
+          privilégié des voyageurs internationaux exigeants. Nous vous offrons non seulement
+          un hébergement, mais un cadre sécurisé et raffiné, pour une immersion totale dans l'excellence.
         </p>
 
-        {/* Cartes des valeurs */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 px-6 md:px-20">
-          <div className="bg-gray-50 shadow-md rounded-xl p-6 hover:shadow-xl transition">
-            <h4 className="text-xl font-semibold text-marine mb-2">
-              Qualité garantie
+        {/* Cartes des valeurs plus aérées et dynamiques */}
+        <motion.div
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.3 }}
+          variants={containerVariants}
+        >
+          
+          {/* Valeur 1 : Qualité Supérieure */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-marine/5 shadow-lg rounded-xl p-8 hover:shadow-2xl transition duration-500 border-t-4 border-marine"
+          >
+            <span className="text-4xl text-marine mb-3 inline-block">⭐</span>
+            <h4 className="text-xl font-bold text-marine mb-2">
+              Qualité Supérieure
             </h4>
-            <p className="text-gray-600">
-              Des infrastructures modernes, propres et bien entretenues pour
-              garantir votre confort.
+            <p className="text-gray-700">
+              Des infrastructures modernes respectant les standards internationaux, synonymes de confort durable et de propreté.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-gray-50 shadow-md rounded-xl p-6 hover:shadow-xl transition">
-            <h4 className="text-xl font-semibold text-marine mb-2">
-              Service professionnel
+          {/* Valeur 2 : Service Personnalisé */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-marine/5 shadow-lg rounded-xl p-8 hover:shadow-2xl transition duration-500 border-t-4 border-lightorange"
+          >
+            <span className="text-4xl text-lightorange mb-3 inline-block">🛎️</span>
+            <h4 className="text-xl font-bold text-marine mb-2">
+              Service Personnalisé
             </h4>
-            <p className="text-gray-600">
-              Une équipe réactive et expérimentée à votre écoute pour répondre à
-              tous vos besoins.
+            <p className="text-gray-700">
+              Une équipe multilingue dédiée, anticipant vos besoins pour une expérience fluide et sans effort.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-gray-50 shadow-md rounded-xl p-6 hover:shadow-xl transition">
-            <h4 className="text-xl font-semibold text-marine mb-2">
-              Tarifs abordables
+          {/* Valeur 3 : Localisation Stratégique */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-marine/5 shadow-lg rounded-xl p-8 hover:shadow-2xl transition duration-500 border-t-4 border-marine"
+          >
+            <span className="text-4xl text-marine mb-3 inline-block">🗺️</span>
+            <h4 className="text-xl font-bold text-marine mb-2">
+              Localisation Stratégique
             </h4>
-            <p className="text-gray-600">
-              Des prix compétitifs pour un service haut de gamme, accessible à
-              tous.
+            <p className="text-gray-700">
+              Proximité des centres d'affaires et des sites touristiques majeurs, optimisant votre temps de découverte.
             </p>
-          </div>
+          </motion.div>
 
-          <div className="bg-gray-50 shadow-md rounded-xl p-6 hover:shadow-xl transition">
-            <h4 className="text-xl font-semibold text-marine mb-2">
-              Sécurité assurée
+          {/* Valeur 4 : Sécurité Optimale */}
+          <motion.div 
+            variants={itemVariants} 
+            className="bg-marine/5 shadow-lg rounded-xl p-8 hover:shadow-2xl transition duration-500 border-t-4 border-lightorange"
+          >
+            <span className="text-4xl text-lightorange mb-3 inline-block">🔒</span>
+            <h4 className="text-xl font-bold text-marine mb-2">
+              Sécurité Optimale
             </h4>
-            <p className="text-gray-600">
-              Nos résidences et espaces sont sécurisés 24h/24 pour votre
-              tranquillité d’esprit.
+            <p className="text-gray-700">
+              Systèmes de sécurité avancés et surveillance 24h/24 pour une tranquillité d’esprit totale.
             </p>
-          </div>
+          </motion.div>
+        </motion.div>
+      </section>
+
+      {/* =========================================================
+        --- SECTION 4 : Galerie (Carrousel) ---
+        =========================================================
+      */}
+      <section className="py-20 lg:py-28 bg-gray-100">
+        <h2 className="text-4xl font-bold text-marine mb-12 text-center">
+          Notre Galerie Privée
+        </h2>
+        {/* Le carrousel doit être importé et bien conçu pour le responsive */}
+        <div className="max-w-screen-2xl mx-auto">
+              <ImageCarousel images={carouselImages} />
         </div>
       </section>
 
-
-      <section className="h-full">
-        <h1 className="text-3xl font-bold text-marine mb-8 text-center pb-8">Galerie</h1>
-        <ImageCarousel
-          images={[
-            chambre,
-            chambre2,
-            espace,
-            vue,
-            jardin,
-            jardine,
-            jardie,
-
-          ]}
-        />
+      {/* =========================================================
+        --- SECTION 5 : Appel à l'action final ---
+        =========================================================
+      */}
+      <section className="bg-marine py-16 text-center">
+          <h3 className="text-3xl md:text-4xl font-semibold text-white mb-4">
+              Prêt pour l'Expérience de Luxe ?
+          </h3>
+          <p className="text-white/80 text-lg mb-8">
+              Laissez-nous orchestrer votre prochain séjour ou événement sans faute.
+          </p>
+          <motion.button
+            onClick={() => navigate("/contact")}
+            className="bg-lightorange hover:bg-white text-white hover:text-marine transition duration-300 transform hover:scale-105 font-bold text-lg px-12 py-4 rounded-full shadow-xl uppercase tracking-wider border-2 border-lightorange hover:border-white"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            Contactez notre Conciergerie
+          </motion.button>
       </section>
-
-
-
     </div>
   );
 }
