@@ -104,9 +104,9 @@ const residences: Residence[] = [
 ];
 
 
-// ==========================================================
+
 // ==== Composant Lightbox (Séparé pour plus de clarté) ====
-// ==========================================================
+
 interface LightboxProps {
     slides: { image: string; caption: string }[];
     index: number;
