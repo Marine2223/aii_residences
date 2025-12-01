@@ -139,7 +139,7 @@ export default function Home() {
                 Notre équipe multilingue est à votre disposition pour toute demande : transferts, excursions privées ou réservations exclusives.
               </p>
               <button 
-                onClick={() => navigate("/Services")} // Assurez-vous d'avoir cette route
+                onClick={() => navigate("/Residences")} // Assurez-vous d'avoir cette route
                 className="self-start text-lightorange font-semibold flex items-center group-hover:text-marine transition"
               >
                 Découvrir le Service →
