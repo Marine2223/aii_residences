@@ -22,13 +22,13 @@ const residences: Residence[] = [
     description: "Le sommet du luxe. Cette suite offre un salon privé, une cuisine équipée et une vue panoramique, idéale pour les longs séjours.",
     Prix: <span className="font-bold text-red-500 text-lg">À partir de 15.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/suitep1.jpg", caption: "Salon VIP spacieux" },
-      { image: "../src/assets/suitep2.jpg", caption: "Chambre principale luxueuse" },
-      { image: "../src/assets/suitep3.jpg", caption: "Cuisine américaine équipée" },
-      { image: "../src/assets/suitep4.jpg", caption: "Vue panoramique" },
-      { image: "../src/assets/suitep5.jpg", caption: "Détails raffinés" },
-      { image: "../src/assets/suitep6.jpg", caption: "Salle de bain en marbre" },
-      { image: "../src/assets/suitep7.jpg", caption: "Espace bureau" },
+      { image: "../assets/suitep1.jpg", caption: "Salon VIP spacieux" },
+      { image: "../assets/suitep2.jpg", caption: "Chambre principale luxueuse" },
+      { image: "../assets/suitep3.jpg", caption: "Cuisine américaine équipée" },
+      { image: "../assets/suitep4.jpg", caption: "Vue panoramique" },
+      { image: "../assets/suitep5.jpg", caption: "Détails raffinés" },
+      { image: "../assets/suitep6.jpg", caption: "Salle de bain en marbre" },
+      { image: "../assets/suitep7.jpg", caption: "Espace bureau" },
     ],
   },
   {
@@ -37,11 +37,11 @@ const residences: Residence[] = [
     description: "Un confort optimal pour le professionnel exigeant. Espace de travail dédié, accès haut débit et service de conciergerie 24/7.",
     Prix: <span className="font-semibold text-marine text-lg">À partir de 10.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/salon1.jpeg", caption: "Espace salon moderne" },
-      { image: "../src/assets/salon2.jpeg", caption: "Coin repas élégant" },
-      { image: "../src/assets/salon3.jpeg", caption: "Détail du mobilier" },
-      { image: "../src/assets/salleB1.jpeg", caption: "Salle de bain design" },
-      { image: "../src/assets/salleB2.jpeg", caption: "Douche italienne" },
+      { image: "../assets/salon1.jpeg", caption: "Espace salon moderne" },
+      { image: "../assets/salon2.jpeg", caption: "Coin repas élégant" },
+      { image: "../assets/salon3.jpeg", caption: "Détail du mobilier" },
+      { image: "../assets/salleB1.jpeg", caption: "Salle de bain design" },
+      { image: "../assets/salleB2.jpeg", caption: "Douche italienne" },
     ],
   },
   {
@@ -50,13 +50,13 @@ const residences: Residence[] = [
     description: "Parfait pour les escapades en solo ou en couple. Intimité et design se rencontrent dans ce studio entièrement optimisé.",
     Prix: <span className="font-semibold text-marine text-lg">À partir de 10.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/suitp.jpg", caption: "Lit King Size" },
-      { image: "../src/assets/suitP1.jpg", caption: "Ambiance cosy" },
-      { image: "../src/assets/suitP2.jpg", caption: "Coin lecture" },
-      { image: "../src/assets/suitP3.jpg", caption: "Détail de la décoration" },
-      { image: "../src/assets/suitP4.jpg", caption: "Luminosité naturelle" },
-      { image: "../src/assets/suitP5.jpg", caption: "Rangements intégrés" },
-      { image: "../src/assets/suitP6.jpg", caption: "Vue de la fenêtre" },
+      { image: "../assets/suitp.jpg", caption: "Lit King Size" },
+      { image: "../assets/suitP1.jpg", caption: "Ambiance cosy" },
+      { image: "../assets/suitP2.jpg", caption: "Coin lecture" },
+      { image: "../assets/suitP3.jpg", caption: "Détail de la décoration" },
+      { image: "../assets/suitP4.jpg", caption: "Luminosité naturelle" },
+      { image: "../assets/suitP5.jpg", caption: "Rangements intégrés" },
+      { image: "../assets/suitP6.jpg", caption: "Vue de la fenêtre" },
     ],
   },
   {
@@ -65,14 +65,14 @@ const residences: Residence[] = [
     description: "Deux chambres séparées pour un séjour en famille sans compromis. Espace, sécurité et ambiance chaleureuse garantis.",
     Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/suit1.jpg", caption: "Grande chambre double" },
-      { image: "../src/assets/suite.jpg", caption: "Chambre enfants" },
-      { image: "../src/assets/suit2.jpg", caption: "Salon détente" },
-      { image: "../src/assets/suit3.jpg", caption: "Salle de bain moderne" },
-      { image: "../src/assets/suit4.jpg", caption: "Balcon privé" },
-      { image: "../src/assets/suit6.jpg", caption: "Détail du mobilier" },
-      { image: "../src/assets/suit7.jpg", caption: "Vue du balcon" },
-      { image: "../src/assets/suit8.jpg", caption: "Coin repas familial" },
+      { image: "../assets/suit1.jpg", caption: "Grande chambre double" },
+      { image: "../assets/suite.jpg", caption: "Chambre enfants" },
+      { image: "../assets/suit2.jpg", caption: "Salon détente" },
+      { image: "../assets/suit3.jpg", caption: "Salle de bain moderne" },
+      { image: "../assets/suit4.jpg", caption: "Balcon privé" },
+      { image: "../assets/suit6.jpg", caption: "Détail du mobilier" },
+      { image: "../assets/suit7.jpg", caption: "Vue du balcon" },
+      { image: "../assets/suit8.jpg", caption: "Coin repas familial" },
     ],
   },
   {
@@ -81,11 +81,11 @@ const residences: Residence[] = [
     description: "Un espace moderne avec un design industriel chic et une vue imprenable sur la côte. Idéal pour l'inspiration et la sérénité.",
     Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/prenium.jpeg", caption: "Espace ouvert Loft" },
-      { image: "../src/assets/prenium2.jpeg", caption: "Vue depuis le lit" },
-      { image: "../src/assets/prenium3.jpeg", caption: "Détails architecturaux" },
-      { image: "../src/assets/prenium1.jpeg", caption: "Coin salon design" },
-      { image: "../src/assets/prenium4.jpeg", caption: "Espace de vie" },
+      { image: "../assets/prenium.jpeg", caption: "Espace ouvert Loft" },
+      { image: "../assets/prenium2.jpeg", caption: "Vue depuis le lit" },
+      { image: "../assets/prenium3.jpeg", caption: "Détails architecturaux" },
+      { image: "../assets/prenium1.jpeg", caption: "Coin salon design" },
+      { image: "../assets/prenium4.jpeg", caption: "Espace de vie" },
     ],
   },
   {
@@ -94,11 +94,11 @@ const residences: Residence[] = [
     description: "L'option idéale combinant prix abordable et standards de qualité. Deux chambres séparées, salon et commodités complètes.",
     Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
     slides: [
-      { image: "../src/assets/prenium11.jpeg", caption: "Salon simple et élégant" },
-      { image: "../src/assets/prenium22.jpeg", caption: "Chambre 1" },
-      { image: "../src/assets/prenium33.jpeg", caption: "Chambre 2" },
-      { image: "../src/assets/prenium44.jpeg", caption: "Cuisine fonctionnelle" },
-      { image: "../src/assets/prenium55.jpeg", caption: "Détail de la décoration" },
+      { image: "../assets/prenium11.jpeg", caption: "Salon simple et élégant" },
+      { image: "../assets/prenium22.jpeg", caption: "Chambre 1" },
+      { image: "../assets/prenium33.jpeg", caption: "Chambre 2" },
+      { image: "../assets/prenium44.jpeg", caption: "Cuisine fonctionnelle" },
+      { image: "../assets/prenium55.jpeg", caption: "Détail de la décoration" },
     ],
   },
 ];
@@ -195,9 +195,7 @@ const Lightbox = ({ slides, index, setLightbox }: LightboxProps) => {
 };
 
 
-// ==========================================================
-// ==== Composant ImageSlider (Amélioré) ====
-// ==========================================================
+//  Composant ImageSlider (Amélioré) // 
 function ImageSlider({
   slides,
   onImageClick,
@@ -277,9 +275,8 @@ function ImageSlider({
 }
 
 
-// ==========================================================
-// ==== Composant principal Residences ====
-// ==========================================================
+
+// ==== Composant principal Residences //
 export default function Residences() {
   const [lightbox, setLightbox] = useState<{
     slides: { image: string; caption: string }[];

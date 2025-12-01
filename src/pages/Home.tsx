@@ -77,10 +77,10 @@ export default function Home() {
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <h3 className="text-3xl font-bold text-marine mb-3 group-hover:text-lightorange transition">
-                Résidences de Luxe
+                Suite VIP
               </h3>
               <p className="text-gray-600 mb-6 flex-1">
-                Des Suites VIP et Premium pensées comme votre **adresse privée**. Profitez d'un confort absolu et d'un service cinq étoiles après vos explorations.
+                Des Suites VIP et Premium pensées comme votre adresse privée. Profitez d'un confort absolu et d'un service cinq étoiles après vos explorations.
               </p>
               <button 
                 onClick={() => navigate("/Residences")} 
@@ -133,7 +133,7 @@ export default function Home() {
             </div>
             <div className="p-8 flex-1 flex flex-col">
               <h3 className="text-3xl font-bold text-marine mb-3 group-hover:text-lightorange transition">
-                Conciergerie 24/7
+                Suite prenium
               </h3>
               <p className="text-gray-600 mb-6 flex-1">
                 Notre équipe multilingue est à votre disposition pour toute demande : transferts, excursions privées ou réservations exclusives.
@@ -150,9 +150,8 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* =========================================================
+      {/* 
         --- SECTION 3 : Pourquoi nous choisir ? (Valeurs) ---
-        =========================================================
       */}
       <section className="py-20 lg:py-28 bg-white text-center px-4">
         <h2 className="text-4xl font-bold text-marine mb-8">
@@ -161,7 +160,7 @@ export default function Home() {
 
         {/* Texte d’introduction plus professionnel */}
         <p className="max-w-4xl mx-auto text-gray-700 text-lg leading-relaxed mb-16">
-          En tant qu'**Africaine des Infrastructures et des Investisseurs**, nous sommes le partenaire
+          En tant qu'Africaine des Infrastructures et des Investisseurs, nous sommes le partenaire
           privilégié des voyageurs internationaux exigeants. Nous vous offrons non seulement
           un hébergement, mais un cadre sécurisé et raffiné, pour une immersion totale dans l'excellence.
         </p>
@@ -233,10 +232,7 @@ export default function Home() {
         </motion.div>
       </section>
 
-      {/* =========================================================
-        --- SECTION 4 : Galerie (Carrousel) ---
-        =========================================================
-      */}
+      {/* --- SECTION 4 : Galerie (Carrousel) ---*/}
       <section className="py-20 lg:py-28 bg-gray-100">
         <h2 className="text-4xl font-bold text-marine mb-12 text-center">
           Notre Galerie Privée
@@ -247,10 +243,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* =========================================================
-        --- SECTION 5 : Appel à l'action final ---
-        =========================================================
-      */}
+      {/* --- SECTION 5 : Appel à l'action final ---*/}
       <section className="bg-marine py-16 text-center">
           <h3 className="text-3xl md:text-4xl font-semibold text-white mb-4">
               Prêt pour l'Expérience de Luxe ?
