@@ -111,7 +111,7 @@ export default function Home() {
                 Orchestrez vos réunions, réceptions ou mariages dans nos lieux d'exception. Une exécution sans faille garantie par notre équipe.
               </p>
               <button 
-                onClick={() => navigate("/Evenements")} // Assurez-vous d'avoir cette route
+                onClick={() => navigate("/EventSpace")} // Assurez-vous d'avoir cette route
                 className="self-start text-lightorange font-semibold flex items-center group-hover:text-marine transition"
               >
                 Organiser votre Événement →

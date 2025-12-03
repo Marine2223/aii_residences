@@ -10,6 +10,7 @@ import Residences from "./pages/Residences";
 import Reservation from "./pages/Reservation";
 import Contact from "./pages/Contct";
 import Apropos from "./pages/Apropos";
+import EventSpace from "./pages/EventSpace";
 
 export default function App() {
   return (
@@ -23,6 +24,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="reservation" element={<Reservation />} />
           <Route path="apropos" element={<Apropos />} />
+          <Route path="/eventSpace" element={<EventSpace />} />
          
         </Routes>
       </main>
