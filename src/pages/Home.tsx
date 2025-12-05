@@ -155,7 +155,7 @@ export default function Home() {
       */}
       <section className="py-20 lg:py-28 bg-white text-center px-4">
         <h2 className="text-4xl font-bold text-marine mb-8">
-          Votre Confiance, Notre Engagement
+          Votre Confort, Notre Engagement
         </h2>
 
         {/* Texte d’introduction plus professionnel */}
