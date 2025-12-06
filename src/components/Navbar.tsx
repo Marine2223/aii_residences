@@ -86,19 +86,19 @@ export default function Navbar() {
           {/* --- LOGOS + NOM --- */}
           <div className="flex items-center gap-4">
             <img
-              src="/logo_AII.png"
-              className="w-14 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
+              src="/src/assets/nouvo.png"
+              className="w-16 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
               alt="logo AII"
               onClick={() => setPreviewImage("/logo_AII.png")}
             />
 
             <div className="hidden lg:block text-white font-bold text-base leading-snug tracking-wider">
-              AFRICAINE DES INFRASTRUCTURES <br /> ET DES INVESTISSEMENTS & ACC's RESIDENCE
+              AFRICAINE DES INFRASTRUCTURES <br /> ET DES INVESTISSEMENTS & RESIDENCE ACC
             </div>
 
             <img
-              src="/logo_acc.jpg"
-              className="w-14 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
+              src="src/assets/Sans.png"
+              className="w-16 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
               alt="logo ACC"
               onClick={() => setPreviewImage("/logo_acc.jpg")}
             />

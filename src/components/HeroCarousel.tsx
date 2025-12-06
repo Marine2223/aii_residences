@@ -1,3 +1,6 @@
+
+
+
 // src/components/HeroCarousel.tsx
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
