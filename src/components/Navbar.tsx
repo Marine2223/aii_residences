@@ -86,7 +86,7 @@ export default function Navbar() {
           {/* --- LOGOS + NOM --- */}
           <div className="flex items-center gap-4">
             <img
-              src="/src/assets/nouvo.png"
+              src="/3.png"
               className="w-16 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
               alt="logo AII"
               onClick={() => setPreviewImage("/logo_AII.png")}
@@ -97,7 +97,7 @@ export default function Navbar() {
             </div>
 
             <img
-              src="src/assets/Sans.png"
+              src="/logo_acc.jpg"
               className="w-16 h-14 cursor-pointer object-cover transition-transform duration-300 hover:scale-105"
               alt="logo ACC"
               onClick={() => setPreviewImage("/logo_acc.jpg")}

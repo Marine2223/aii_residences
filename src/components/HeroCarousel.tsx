@@ -1,32 +1,36 @@
-
-
-
 // src/components/HeroCarousel.tsx
 import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, useScroll, useTransform } from "framer-motion";
 
-// Import des images du carrousel
 import espace1 from "../assets/espace1.jpg";
 import chambre2 from "../assets/chambre2.jpg";
 import vue from "../assets/jardin1.jpg";
+import { Link } from "react-router-dom";
 
 const images = [espace1, chambre2, vue];
 
 export default function HeroCarousel() {
   const [current, setCurrent] = useState(0);
 
-  // Auto-play du carrousel toutes les 5 secondes
+  // Auto défilement
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrent((prev) => (prev + 1) % images.length);
     }, 5000);
-
     return () => clearInterval(interval);
   }, []);
 
+  // --- Effet parallax sur le texte ---
+  const { scrollY } = useScroll();
+
+  // Le texte monte légèrement quand on scrolle
+  const y = useTransform(scrollY, [0, 300], [0, -100]);
+
+  // Le texte devient un tout petit peu plus transparent
+  const opacity = useTransform(scrollY, [0, 300], [1, 0.4]);
+
   return (
     <div className="relative h-screen w-full overflow-hidden">
-      {/* Carrousel d'images */}
       <AnimatePresence>
         <motion.img
           key={current}
@@ -40,18 +44,29 @@ export default function HeroCarousel() {
         />
       </AnimatePresence>
 
-      {/* Overlay sombre pour lisibilité */}
-      <div className="absolute inset-0 bg-black/40"></div>
+      <div className="absolute inset-0 bg-black/60"></div>
 
-      {/* Texte fixe au centre */}
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10">
-        <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-4">
-          Vos Événements, Notre Scène de Prestige
-        </h1>
+      {/* Texte animé au scroll */}
+      <motion.div
+        style={{ y, opacity }}
+        className="absolute inset-0 flex flex-col items-center justify-center text-center px-4 z-10"
+      >
+
+        <div className="marquee text-5xl md:text-7xl font-extrabold text-white mb-4">
+          <span>Le luxe du "chez-soi" sans les contraintes.</span>
+        </div>
         <p className="text-xl text-gray-200 max-w-2xl">
-          Des conférences d'élite aux célébrations les plus mémorables, nous offrons l'écrin parfait pour chaque occasion.
+          Plus qu'un lieu, une atmosphère. Découvrez des cocons chaleureux pour vos séjours en au Bénin.
         </p>
-      </div>
+        <Link
+            to="/contact"
+            onClick={() => localStorage.setItem('reservationType', 'Espace événementiel')}
+            className="mt-6 inline-block bg-lightorange hover:bg-orange-600 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition duration-300"
+          >
+            Contactez-nous maintenant
+          </Link>
+      </motion.div>
+
     </div>
   );
 }
