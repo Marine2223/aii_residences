@@ -93,7 +93,7 @@ export default function Navbar() {
             />
 
             <div className="hidden lg:block text-white font-bold text-base leading-snug tracking-wider">
-              AFRICAINE DES INFRASTRUCTURES <br /> ET DES INVESTISSEMENTS & RESIDENCE ACC
+              ACC'S RESIDENCE
             </div>
 
             <img

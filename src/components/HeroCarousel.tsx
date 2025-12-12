@@ -53,10 +53,10 @@ export default function HeroCarousel() {
       >
 
         <div className="marquee text-5xl md:text-7xl font-extrabold text-white mb-4">
-          <span>Le luxe du "chez-soi" sans les contraintes.</span>
+          <span>ACC'S Résidence, votre espace de bien-être</span>
         </div>
         <p className="text-xl text-gray-200 max-w-2xl">
-          Plus qu'un lieu, une atmosphère. Découvrez des cocons chaleureux pour vos séjours en au Bénin.
+          Nous créons un environnement calme, sécurisé et harmonieux afin que chaque séjour soit une expérience agréable et mémorable.
         </p>
         <Link
             to="/contact"
