@@ -46,9 +46,13 @@ export default function Reservation() {
         // Contact d'Urgence
         contactUrgenceNom: "",
         contactUrgenceTelephone: "",
-
         message: "",
         conditionsAcceptees: false,
+
+        // Messages et options
+        navette: false,
+        petitDejeuner: false,
+
     });
 
     const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
@@ -74,32 +78,28 @@ export default function Reservation() {
 
         // Création du message complet pour WhatsApp et Email
         const fullMessage = `
-*Nouvelle Demande de Réservation de Luxe*
---------------------------------------------------
+            Nouvelle Demande de Réservation de Luxe
+            TYPE DE SÉJOUR :${form.type} (Motif : ${form.motif})
+            Dates : Du ${form.arrivee} au ${form.depart}
+            Hôtes : ${form.nbAdultes} adultes, ${form.nbEnfants} enfants
 
-*TYPE DE SÉJOUR :* ${form.type} (Motif : ${form.motif})
-*Dates :* Du ${form.arrivee} au ${form.depart}
-*Hôtes :* ${form.nbAdultes} adultes, ${form.nbEnfants} enfants
+            CLIENT PRINCIPAL
+            Nom & Prénoms : ${form.nom} ${form.prenoms}
+            Nationalité : ${form.nationalite}
+            Contact : ${form.telephone} / ${form.email}
+            Adresse : ${form.adresseComplete}
 
-*CLIENT PRINCIPAL*
-Nom & Prénoms : ${form.nom} ${form.prenoms}
-Nationalité : ${form.nationalite}
-Contact : ${form.telephone} / ${form.email}
-Adresse : ${form.adresseComplete}
+            PIÈCE D'IDENTITÉ
+            Type : ${form.typePiece}
+            Numéro : ${form.numeroPiece}
+            Délivrée le : ${form.delivreeLe} à ${form.delivreeA}
+            Expire le : ${form.dateExpiration}
 
-*PIÈCE D'IDENTITÉ*
-Type : ${form.typePiece}
-Numéro : ${form.numeroPiece}
-Délivrée le : ${form.delivreeLe} à ${form.delivreeA}
-Expire le : ${form.dateExpiration}
+            CONTACT D'URGENCE
+            Nom : ${form.contactUrgenceNom}
+            Téléphone : ${form.contactUrgenceTelephone}
 
-*CONTACT D'URGENCE*
-Nom : ${form.contactUrgenceNom}
-Téléphone : ${form.contactUrgenceTelephone}
-
-*MESSAGE :*
-${form.message || "Aucun message complémentaire."}
-    `;
+            MESSAGE :${form.message || "Aucun message complémentaire."} `;
 
         /* ====== WHATSAPP SENDER ====== */
         const whatsappNumber = "+2290196459618";
