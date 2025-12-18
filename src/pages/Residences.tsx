@@ -34,17 +34,19 @@ import suit6 from "../assets/suit6.jpg";
 import suit7 from "../assets/suit7.jpg";
 import suit8 from "../assets/suit8.jpg";
 
-import prenium from "../assets/prenium.jpeg";
-import prenium1 from "../assets/prenium1.jpeg";
-import prenium2 from "../assets/prenium2.jpeg";
-import prenium3 from "../assets/prenium3.jpeg";
-import prenium4 from "../assets/prenium4.jpeg";
+import ife2 from "../assets/ife2.jpeg";
+import ife3 from "../assets/ife3.jpeg";
+import ife4 from "../assets/ife4.jpeg";
+import ife5 from "../assets/ife5.jpeg";
+import ife6 from "../assets/ife6.jpeg";
 
 import prenium11 from "../assets/prenium11.jpeg";
 import prenium22 from "../assets/prenium22.jpeg";
 import prenium33 from "../assets/prenium33.jpeg";
 import prenium44 from "../assets/prenium44.jpeg";
 import prenium55 from "../assets/prenium55.jpeg";
+
+
 
 // ==== Interface ====
 interface Residence {
@@ -62,87 +64,87 @@ interface Residence {
 const residences: Residence[] = [
   {
     id: 1,
-    name: "Suite Présidentielle VIP",
+    name: "Chambre Prestige Sika",
     description: "Le sommet du luxe. Cette suite offre un salon privé, une cuisine équipée et une vue panoramique, idéale pour les longs séjours.",
     Prix: <span className="font-bold text-red-500 text-lg">À partir de 15.000 F CFA / nuit</span>,
     slides: [
-      { image: suitep1, caption: "Salon VIP spacieux" },
-      { image: suitep2, caption: "Chambre principale luxueuse" },
-      { image: suitep3, caption: "Cuisine américaine équipée" },
-      { image: suitep4, caption: "Vue panoramique" },
-      { image: suitep5, caption: "Détails raffinés" },
-      { image: suitep6, caption: "Salle de bain en marbre" },
-      { image: suitep7, caption: "Espace bureau" },
+      { image: suitep1, caption: "" },
+      { image: suitep2, caption: "" },
+      { image: suitep3, caption: "" },
+      { image: suitep4, caption: "" },
+      { image: suitep5, caption: "" },
+      { image: suitep6, caption: "" },
+      { image: suitep7, caption: "" },
     ],
   },
   {
     id: 2,
-    name: "Appartement d'Affaires Premium",
+    name: "Suite Prestige Dessi",
     description: "Un confort optimal pour le professionnel exigeant. Espace de travail dédié, accès haut débit et service de conciergerie 24/7.",
-    Prix: <span className="font-semibold text-marine text-lg">À partir de 10.000 F CFA / nuit</span>,
+    Prix: <span className="font-semibold text-marine text-lg">À partir de 20.000 F CFA / nuit</span>,
     slides: [
-      { image: salon1, caption: "Espace salon moderne" },
-      { image: salon2, caption: "Coin repas élégant" },
-      { image: salon3, caption: "Détail du mobilier" },
-      { image: salleB1, caption: "Salle de bain design" },
-      { image: salleB2, caption: "Douche italienne" },
+      { image: salon1, caption: "" },
+      { image: salon2, caption: "" },
+      { image: salon3, caption: "" },
+      { image: salleB1, caption: "" },
+      { image: salleB2, caption: "" },
     ],
   },
   {
     id: 3,
-    name: "Studio Exécutif Luxe",
+    name: "Chambre Exécutive Kaya",
     description: "Parfait pour les escapades en solo ou en couple. Intimité et design se rencontrent dans ce studio entièrement optimisé.",
-    Prix: <span className="font-semibold text-marine text-lg">À partir de 10.000 F CFA / nuit</span>,
+    Prix: <span className="font-semibold text-marine text-lg">À partir de 12.000 F CFA / nuit</span>,
     slides: [
-      { image: suitp, caption: "Lit King Size" },
-      { image: suitP1, caption: "Ambiance cosy" },
-      { image: suitP2, caption: "Coin lecture" },
-      { image: suitP3, caption: "Détail de la décoration" },
-      { image: suitP4, caption: "Luminosité naturelle" },
-      { image: suitP5, caption: "Rangements intégrés" },
-      { image: suitP6, caption: "Vue de la fenêtre" },
+      { image: suitp, caption: "" },
+      { image: suitP1, caption: "" },
+      { image: suitP2, caption: "" },
+      { image: suitP3, caption: "" },
+      { image: suitP4, caption: "" },
+      { image: suitP5, caption: "" },
+      { image: suitP6, caption: "" },
     ],
   },
   {
     id: 4,
-    name: "Appartement Familial Confort",
+    name: "Suite Premium Marrakech",
     description: "Deux chambres séparées pour un séjour en famille sans compromis. Espace, sécurité et ambiance chaleureuse garantis.",
-    Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
+    Prix: <span className="font-semibold text-marine text-lg">À partir de 18.000 F CFA / nuit</span>,
     slides: [
-      { image: suit1, caption: "Grande chambre double" },
-      { image: suite, caption: "Chambre enfants" },
-      { image: suit2, caption: "Salon détente" },
-      { image: suit3, caption: "Salle de bain moderne" },
-      { image: suit4, caption: "Balcon privé" },
-      { image: suit6, caption: "Détail du mobilier" },
-      { image: suit7, caption: "Vue du balcon" },
-      { image: suit8, caption: "Coin repas familial" },
+      { image: suit1, caption: "" },
+      { image: suite, caption: "" },
+      { image: suit2, caption: "" },
+      { image: suit3, caption: "" },
+      { image: suit4, caption: "" },
+      { image: suit6, caption: "" },
+      { image: suit7, caption: "" },
+      { image: suit8, caption: "" },
     ],
   },
   {
     id: 5,
-    name: "Loft Design - Vue Mer",
+    name: "Suite Prestige Ifè",
     description: "Un espace moderne avec un design industriel chic et une vue imprenable sur la côte. Idéal pour l'inspiration et la sérénité.",
-    Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
+    Prix: <span className="font-semibold text-marine text-lg">À partir de 20.000 F CFA / nuit</span>,
     slides: [
-      { image: prenium, caption: "Espace ouvert Loft" },
-      { image: prenium2, caption: "Vue depuis le lit" },
-      { image: prenium3, caption: "Détails architecturaux" },
-      { image: prenium1, caption: "Coin salon design" },
-      { image: prenium4, caption: "Espace de vie" },
+      { image: ife2, caption: "" },
+      { image: ife3, caption: "" },
+      { image: ife4, caption: "" },
+      { image: ife5, caption: "" },
+      { image: ife6, caption: "" },
     ],
   },
   {
     id: 6,
-    name: "Appartement- Standard Élite",
+    name: "Chambre Prestige Nala",
     description: "L'option idéale combinant prix abordable et standards de qualité. Deux chambres séparées, salon et commodités complètes.",
-    Prix: <span className="font-semibold text-marine text-lg">À partir de 15.000 F CFA / nuit</span>,
+    Prix: <span className="font-semibold text-marine text-lg">À partir de 12.000 F CFA / nuit</span>,
     slides: [
-      { image: prenium11, caption: "Salon simple et élégant" },
-      { image: prenium22, caption: "Chambre 1" },
-      { image: prenium33, caption: "Chambre 2" },
-      { image: prenium44, caption: "Cuisine fonctionnelle" },
-      { image: prenium55, caption: "Détail de la décoration" },
+      { image: prenium11, caption: "" },
+      { image: prenium22, caption: "" },
+      { image: prenium33, caption: "" },
+      { image: prenium44, caption: "" },
+      { image: prenium55, caption: "" },
     ],
   },
 ];

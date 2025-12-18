@@ -24,11 +24,6 @@ export default function Footer() {
             </a>
           </li>
           <li>
-            <a href="/evenements" className="hover:text-orange transition-colors">
-              Événements
-            </a>
-          </li>
-          <li>
             <a href="/reservation" className="hover:text-orange transition-colors">
               Réservations
             </a>
